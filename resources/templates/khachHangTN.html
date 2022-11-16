@@ -11,19 +11,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Student</title>
-    <!-- <link href="../static/assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <title>Dashboard | Bootstrap Simple Admin Template</title>
+    <link href="../static/assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="../static/assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
     <link href="../static/assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
     <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/assets/css/master.css" rel="stylesheet">
     <link href="../static/assets/vendor/flagiconcss/css/flag-icon.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../static/assets/css/main.css"> -->
     <link rel="stylesheet" href="../static/assets/css/main.css">
-    <link href="../static/assets/css/master.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 
@@ -41,13 +36,13 @@
                     <a href="student.html"><i class="fas fa-user-friends"></i> Student</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-chalkboard-teacher"></i> Class</a>
+                    <a href="POstudent.html"><i class="fas fa-chalkboard-teacher"></i> Class</a>
                 </li>
                 <li>
-                    <a href="POstudent.html"><i class="fas fa-user-clock"></i> PO Student</a>
+                    <a href="#"><i class="fas fa-user-clock"></i> PO Student</a>
                 </li>
                 <li>
-                    <a href="giaoVien.html"><i class="fas fa-user-tie"></i> Teacher</a>
+                    <a href="#"><i class="fas fa-user-tie"></i> Teacher</a>
                 </li>
                 <li>
                     <a href="#"><i class="fas fa-user-circle"></i> Account</a>
@@ -55,6 +50,7 @@
             </ul>
         </nav>
         <div id="body" class="active">
+            <div id="body" class="active">
                 <!-- navbar navigation component -->
                 <nav class="navbar navbar-expand-lg navbar-white bg-white">
                     <button type="button" id="sidebarCollapse" class="btn btn-light">
@@ -83,29 +79,21 @@
                 <div class="content">
                     <div class="container">
                         <div class="page-title" style="margin-bottom: 20px;">
-                            <h3>Student management</h3>
+                            <h3>Potential Student management</h3>
                         </div>
-                        <div class="filterClass">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Input Class ID" aria-label="Username" aria-describedby="input-group-button-right">
-                                <button type="button" class="btn btn-outline-secondary" id="input-group-button-right">Filter</button>
-                            </div>
-                        </div>
-
-
                         <!-- Form insert new student -->
                         <div id="insertForm" class="col-lg-12">
                             <div class="card">
-                                <div class="card-header">Thêm học sinh mới</div>
+                                <div class="card-header">Thêm học sinh tiềm năng mới</div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Điền thông tin học sinh vào bên dưới:</h5>
+                                    <h5 class="card-title">Điền thông tin học sinh tiềm năng vào bên dưới:</h5>
                                     <form class="needs-validation" novalidate accept-charset="utf-8">
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-6">
                                                 <label for="text" class="form-label">Họ tên</label>
                                                 <input type="text" class="form-control" name="hoten" placeholder="Họ tên" required>
                                             </div>
-                                            <div class="mb-3 col-md-6">
+                                            <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Số điện thoại</label>
                                                 <input type="number" class="form-control" name="sdt" placeholder="Số điện thoại" required>
                                             </div>
@@ -113,25 +101,19 @@
                                         <div class="mb-3">
                                             <label for="address" class="form-label">Địa chỉ</label>
                                             <input type="text" class="form-control" name="address" placeholder="Ex: Số 12, Linh Trung, Thủ Đức" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your address.</div>
                                         </div>
                                         <div class="row g-2">
-                                            <div class="mb-3 col-md-3">
-                                                <label for="city" class="form-label">Trình độ</label>
-                                                <input type="text" class="form-control" name="trinhDo" placeholder="Mã trình độ" required>
+                                            <div class="mb-3 col-md-4">
+                                                <label for="city" class="form-label">Thời gian rảnh</label>
+                                                <input type="text" class="form-control" name="thoiGianRanh" placeholder="Thứ 3,5 tối" required>
                                             </div>
                                             <div class="mb-3 col-md-3">
-                                                <label for="state" class="form-label">Trạng thái</label>
-                                                <select name="state" class="form-select" required>
-                                                    <option value="" selected>Choose...</option>
-                                                    <option value="1">Hoạt động</option>
-                                                    <option value="2">Ngừng hoạt động</option>
-                                                </select>
+                                                <label for="city" class="form-label">Lớp muốn học</label>
+                                                <input type="text" class="form-control" name="thoiGianRanh" placeholder="" required>
                                             </div>
-                                            <div class="mb-3 col-md-2">
-                                                <label for="zip" class="form-label">Ngày đăng ký</label>
-                                                <input type="date" class="form-control" name="ngayDK" placeholder="29/03/2022" required>
+                                            <div class="mb-3 col-md-3">
+                                                <label for="zip" class="form-label">Ngày nhận thông tin đăng kí</label>
+                                                <input type="date" class="form-control" name="ngayNhanTT" placeholder="01/01/2022" required>
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
@@ -144,16 +126,16 @@
                         <!-- Form update new student -->
                         <div id="updateForm" class="col-lg-12">
                             <div class="card">
-                                <div class="card-header">Cập nhật thông tin học sinh</div>
+                                <div class="card-header">Cập nhật học sinh tiềm năng mới</div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Điền thông tin cần cập nhật</h5>
+                                    <h5 class="card-title">Cập nhật thông tin học sinh tiềm năng vào bên dưới:</h5>
                                     <form class="needs-validation" novalidate accept-charset="utf-8">
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-6">
                                                 <label for="text" class="form-label">Họ tên</label>
                                                 <input type="text" class="form-control" name="hoten" placeholder="Họ tên" required>
                                             </div>
-                                            <div class="mb-3 col-md-6">
+                                            <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Số điện thoại</label>
                                                 <input type="number" class="form-control" name="sdt" placeholder="Số điện thoại" required>
                                             </div>
@@ -161,28 +143,22 @@
                                         <div class="mb-3">
                                             <label for="address" class="form-label">Địa chỉ</label>
                                             <input type="text" class="form-control" name="address" placeholder="Ex: Số 12, Linh Trung, Thủ Đức" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your address.</div>
                                         </div>
                                         <div class="row g-2">
-                                            <div class="mb-3 col-md-3">
-                                                <label for="city" class="form-label">Trình độ</label>
-                                                <input type="text" class="form-control" name="trinhDo" placeholder="Mã trình độ" required>
+                                            <div class="mb-3 col-md-4">
+                                                <label for="city" class="form-label">Thời gian rảnh</label>
+                                                <input type="text" class="form-control" name="thoiGianRanh" placeholder="" required>
                                             </div>
                                             <div class="mb-3 col-md-3">
-                                                <label for="state" class="form-label">Trạng thái</label>
-                                                <select name="state" class="form-select" required>
-                                                    <option value="" selected>Choose...</option>
-                                                    <option value="1">Hoạt động</option>
-                                                    <option value="2">Ngừng hoạt động</option>
-                                                </select>
+                                                <label for="city" class="form-label">Lớp muốn học</label>
+                                                <input type="text" class="form-control" name="thoiGianRanh" placeholder="" required>
                                             </div>
-                                            <div class="mb-3 col-md-2">
-                                                <label for="zip" class="form-label">Ngày đăng ký</label>
-                                                <input type="date" class="form-control" name="ngayDK" placeholder="29/03/2022" required>
+                                            <div class="mb-3 col-md-3">
+                                                <label for="zip" class="form-label">Ngày nhận thông tin đăng kí</label>
+                                                <input type="date" class="form-control" name="ngayNhanTT" placeholder="01-01-2022" required>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
+                                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
                                         <button type="submit" class="btn btn-danger"><i class="fas fa-undo"></i> Cancel</button>
                                     </form>
                                 </div>
@@ -203,21 +179,21 @@
                                                         <th>Họ tên</th>
                                                         <th>Địa chỉ</th>
                                                         <th>SDT</th>
-                                                        <th>Trình độ</th>
+                                                        <th>TG rảnh</th>
+                                                        <th>Mã lớp MH</th>
                                                         <th>Ngày đăng ký</th>
-                                                        <th>Trạng thái</th>
                                                         <th> </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="row">1235</th>
+                                                        <th scope="row">123</th>
                                                         <td>Mark Zuck</td>
                                                         <td>Số 23, đường Hoàng Văn Thụ, Phường Long Bình, Quận 9 </td>
                                                         <td>0362103314</td>
-                                                        <td>112233</td>
-                                                        <th>29/03/2022</th>
-                                                        <th>Đang học</th>
+                                                        <td>Thứ 3,5,7 tối</td>
+                                                        <td>ielts_01</td>
+                                                        <td>29/03/2022</td>
                                                         <th>
                                                             <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
                                                                 <button type="button" id="updateStudentBtn" class="btn btn-primary">Fix</button>
@@ -226,13 +202,13 @@
                                                         </th>
                                                     </tr>
                                                     <tr>
-                                                        <th scope="row">6345</th>
-                                                        <td>Mark Zuck</td>
-                                                        <td>S111, Đường Tân Hiệp, Tân Long, Bình Thạnh</td>
-                                                        <td>0362103314</td>
-                                                        <td>112233</td>
-                                                        <th>29/03/2022</th>
-                                                        <th>Đang học</th>
+                                                        <th scope="row">243</th>
+                                                        <td>Bob Alie</td>
+                                                        <td>Số 15, đường Tản Viên, Quận Tân Bình </td>
+                                                        <td>036210321</td>
+                                                        <td>Thứ 2,4,6 chiều</td>
+                                                        <td>ielts_02</td>
+                                                        <td>29/03/2022</td>
                                                         <th>
                                                             <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
                                                                 <button type="button" id="updateStudentBtn" class="btn btn-primary">Fix</button>
@@ -242,7 +218,7 @@
                                                     </tr>
                                                     <tr>
                                                         <th scope="row" colspan="8" style="text-align: right;">
-                                                            <button type="button" id="addStudentBtn" class="btn btn-primary">Thêm học sinh</button>
+                                                            <button type="button" id="addStudentBtn" class="btn btn-primary">Thêm học sinh tiềm năng</button>
                                                         </th>
                                                     </tr>
                                                 </tbody>
@@ -255,37 +231,36 @@
 
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $("#insertForm").hide();
-            $("#updateForm").hide();
-            $("#addStudentBtn").click(function() {
-                $("#updateForm").hide();
-                $("#insertForm").toggle(500);
-            });
-            $("#updateStudentBtn").click(function() {
-                $("#insertForm").hide();
-                $("#updateForm").toggle(500);
-            });
-    
-            // Delete button
-            $(".deleteStudentBtn").click(function() {
-                //get infor of student to delete here
-                if (confirm("Do you want to delete student id: " + $(this).parent().parent().parent().first().children().first().text())) {
-                    $(this).parent().parent().parent().remove();
-                }
-    
-            });
-        });
-    </script>
     <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
     <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/assets/vendor/chartsjs/Chart.min.js"></script>
     <script src="../static/assets/js/dashboard-charts.js"></script>
     <script src="../static/assets/js/script.js"></script>
 </body>
+<script>
+    $(document).ready(function() {
+        $("#insertForm").hide();
+        $("#updateForm").hide();
+        $("#addStudentBtn").click(function() {
+            $("#updateForm").hide();
+            $("#insertForm").toggle(500);
+        });
+        $("#updateStudentBtn").click(function() {
+            $("#insertForm").hide();
+            $("#updateForm").toggle(500);
+        });
 
+        // Delete button
+        $(".deleteStudentBtn").click(function() {
+            //get infor of student to delete here
+            if (confirm("Do you want to delete student id: " + $(this).parent().parent().parent().first().children().first().text())) {
+                $(this).parent().parent().parent().remove();
+            }
+        });
+    });
+</script>
 
 </html>
