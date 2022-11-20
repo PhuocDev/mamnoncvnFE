@@ -107,7 +107,7 @@
                                     <div class="row g-2">
                                         <div class="mb-3 col-md-4">
                                             <label  for="formFile" class="form-label">Ảnh bìa</label>
-                                            <input  field="*{thumbnail}" type="file" class="form-control" name="thumbnail" placeholder="anhBia.jpeg" required>
+                                            <input  field="*{thumbnail}" type="file" class="form-control" name="thumbnail" accept="image/png, image/jpeg" placeholder="anhBia.jpeg" required>
                                         </div>
                                         <div class="mb-3 col-md-3">
                                             <label  for="text" class="form-label">Tác giả</label>
@@ -239,6 +239,7 @@
                     </div>
                 </div>
             </div>
+            <button type="button" id="showText" class="btn btn-primary">Show textarea</button>
     </div>
 </div>
 <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
@@ -262,7 +263,11 @@
 <script>
 
     $(document).ready(function() {
-
+        $("#showText").click(function() {
+            var thought = jQuery("textarea#editorUpdate").val();
+            console.log(thought);
+            alert(thought);
+        })
         $("#insertForm").hide();
         $("#updateForm").hide();
         $("#addBlogBtn").click(function() {

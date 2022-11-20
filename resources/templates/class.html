@@ -109,14 +109,14 @@
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Ngày khai giảng</label>
                                                 <div class="mb-3">
-                                                    <input type="text" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Khai giảng">
+                                                    <input type="text" id="insertDateForm1" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Khai giảng">
                                                     <small class="form-text text-muted">You can change the month, year, and date</small>
                                                 </div>
                                             </div>
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Ngày kết thúc</label>
                                                 <div class="mb-3">
-                                                    <input type="text" id="insertDateForm" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Kết thúc">
+                                                    <input type="text" id="insertDateForm2" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Kết thúc">
                                                     <small class="form-text text-muted">You can change the month, year, and date</small>
                                                 </div>
                                             </div>
@@ -136,7 +136,7 @@
                                                 <label for="hocPhi" class="form-label">Học phí</label>
                                                 <input type="number" class="form-control" name="hocPhi" placeholder="" required>
                                             </div>
-                                            <div class="mb-3 col-md-3">
+                                            <div class="mb-3 col-md-2">
                                                 <label for="totalStudent" class="form-label">Sỉ số</label>
                                                 <input type="number" class="form-control" name="totalStudent" placeholder="" required>
                                             </div>
@@ -165,30 +165,34 @@
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Tên lớp</label>
-                                                <input type="text" class="form-control" name="hotenUpdate" minlength="4" placeholder="Lớp mầm,chồi,..." required>
+                                                <input id="tenLopUpdate" type="text" class="form-control" name="tenLopUpdate" minlength="4" placeholder="Lớp mầm,chồi,..." required>
                                             </div>
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Độ tuổi</label>
-                                                <select name="age" id="doTuoi" class="form-control">
+                                                <select name="age" id="doTuoiUpdate" class="form-control">
                                                     <option value="2">Từ 2 - 3 tuổi</option>
                                                     <option value="3">Từ 3 - 4 tuổi</option>
                                                     <option value="4">Từ 4 - 5 tuổi</option>
                                                     <option value="1">Dưới 2 tuổi</option>
                                                 </select>
                                             </div>
+                                            <div class="mb-3 col-md-3" hidden>
+                                                <label for="text" class="form-label">ID</label>
+                                                <input type="text" class="form-control" name="idUpdate" minlength="4" placeholder="Lớp mầm,chồi,..." required>
+                                            </div>
                                         </div>
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Ngày khai giảng</label>
                                                 <div class="mb-3">
-                                                    <input type="text" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Khai giảng">
+                                                    <input id="khaiGiangUpdate" type="text" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Khai giảng">
                                                     <small class="form-text text-muted">You can change the month, year, and date</small>
                                                 </div>
                                             </div>
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Ngày kết thúc</label>
                                                 <div class="mb-3">
-                                                    <input type="text" id="insertDateForm" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Kết thúc">
+                                                    <input  type="text" id="ketThucUpdate" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="Kết thúc">
                                                     <small class="form-text text-muted">You can change the month, year, and date</small>
                                                 </div>
                                             </div>
@@ -196,25 +200,25 @@
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Giáo viên 1</label>
-                                                <input type="text" class="form-control" name="giaoVien1" minlength="4" placeholder="Nguyễn Thị Hà" required>
+                                                <input id="giaovien1Update" type="text" class="form-control" name="giaoVien1" minlength="4" placeholder="Nguyễn Thị Hà" required>
                                             </div>
                                             <div class="mb-3 col-md-3">
                                                 <label for="text" class="form-label">Giáo viên 2</label>
-                                                <input type="text" class="form-control" name="giaoVien2" minlength="4" placeholder="Trần Thu Lệ" required>
+                                                <input id="giaovien2Update" type="text" class="form-control" name="giaoVien2" minlength="4" placeholder="Trần Thu Lệ" required>
                                             </div>
                                         </div>
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-4">
                                                 <label for="hocPhi" class="form-label">Học phí</label>
-                                                <input type="number" class="form-control" name="hocPhi" placeholder="" required>
+                                                <input id="hocPhiUpdate" type="number" class="form-control" name="hocPhi" placeholder="" required>
                                             </div>
-                                            <div class="mb-3 col-md-3">
+                                            <div class="mb-3 col-md-2">
                                                 <label for="totalStudent" class="form-label">Sỉ số</label>
-                                                <input type="number" class="form-control" name="totalStudent" placeholder="" required>
+                                                <input id="totalStudentUpdate" type="number" class="form-control" name="totalStudent" placeholder="" required>
                                             </div>
                                             <div class="mb-3 col-md-3">
                                                 <label for="status" class="form-label">Trạng thái</label>
-                                                <select name="status" id="status" class="form-control">
+                                                <select name="status" id="statusUpdate" class="form-control">
                                                     <option value="true">Hoạt động</option>
                                                     <option value="false">Ngừng hoạt động</option>
                                                 </select>
@@ -246,6 +250,7 @@
                                                         <th>Giáo viên 1</th>
                                                         <th>Giáo viên 2</th>
                                                         <th>Trạng thái</th>
+                                                        <th hidden>Ngày kết thúc</th>
                                                         <th> </th>
                                                     </tr>
                                                 </thead>
@@ -254,12 +259,13 @@
                                                         <th scope="row">123</th>
                                                         <td>Lớp Mầm</td>
                                                         <td>2 - 3</td>
-                                                        <td>29-03-2022</td>
+                                                        <td>2022-03-29</td>
                                                         <td>4500000</td>
                                                         <td>15</td>
                                                         <td>Nguyễn Thị Ngọc</td>
                                                         <td>Trần Thị Lệ</td>
                                                         <td>Đang hoạt động</td>
+                                                        <td hidden>2023-03-29</td>
                                                         <th>
                                                             <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
                                                                 <button type="button" class="btn btn-primary updateClassBtn">Fix</button>
@@ -314,10 +320,16 @@
         $(".updateClassBtn").click(function() {
             $("#insertForm").hide();
             $("#updateForm").toggle(500);
-            $("#hoTenUpdate").val($(this).parent().parent().parent().first().children().first().next().text());
-            $("#diaChiUpdate").val($(this).parent().parent().parent().first().children().first().next().next().text());
-            $("#sdtUpdate").val(parseInt($(this).parent().parent().parent().first().children().first().next().next().next().text()));
-            $("#emailUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().text());
+            $("#idUpdate").val($(this).parent().parent().parent().first().children().first().text());
+            $("#tenLopUpdate").val($(this).parent().parent().parent().first().children().first().next().text());
+            $("#doTuoiUpdate").val(parseInt($(this).parent().parent().parent().first().children().first().next().next().text()));
+            $("#khaiGiangUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().text());
+            $("#hocPhiUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().text());
+            $("#totalStudentUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().text());
+               $("#giaovien1Update").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().text());
+               $("#giaovien2Update").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().text());
+               $("#statusUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().text());
+               $("#ketThucUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().next().text());
         });
 
         // Delete button
@@ -329,7 +341,10 @@
 
         });
 
-        $('#insertDateForm').datepicker({
+        $('#insertDateForm1').datepicker({
+            dateFormat: 'yyyy-mm-dd'
+        }).val();
+        $('#insertDateForm2').datepicker({
             dateFormat: 'yyyy-mm-dd'
         }).val();
         $('#updateDateForm').datepicker({
