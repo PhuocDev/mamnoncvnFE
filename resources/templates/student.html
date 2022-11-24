@@ -12,19 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Student</title>
-    <!-- <link href="../static/assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="../static/assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
     <link href="../static/assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
     <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/assets/css/master.css" rel="stylesheet">
     <link href="../static/assets/vendor/flagiconcss/css/flag-icon.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../static/assets/css/main.css"> -->
     <link rel="stylesheet" href="../static/assets/css/main.css">
-    <link href="../static/assets/css/master.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <link href="../static/assets/vendor/airdatepicker/css/datepicker.min.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 </head>
 
 <body>
@@ -41,13 +39,13 @@
                     <a href="student.html"><i class="fas fa-user-friends"></i> Student</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-chalkboard-teacher"></i> Class</a>
+                    <a href="POstudent.html"><i class="fas fa-chalkboard-teacher"></i> Class</a>
                 </li>
                 <li>
-                    <a href="POstudent.html"><i class="fas fa-user-clock"></i> PO Student</a>
+                    <a href="#"><i class="fas fa-user-clock"></i> PO Student</a>
                 </li>
                 <li>
-                    <a href="giaoVien.html"><i class="fas fa-user-tie"></i> Teacher</a>
+                    <a href="giaoVien.html"><i class="fas fa-user-tie"></i> Class</a>
                 </li>
                 <li>
                     <a href="#"><i class="fas fa-user-circle"></i> Account</a>
@@ -55,6 +53,7 @@
             </ul>
         </nav>
         <div id="body" class="active">
+            <div id="body" class="active">
                 <!-- navbar navigation component -->
                 <nav class="navbar navbar-expand-lg navbar-white bg-white">
                     <button type="button" id="sidebarCollapse" class="btn btn-light">
@@ -65,7 +64,7 @@
                             <li class="nav-item dropdown">
                                 <div class="nav-dropdown">
                                     <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-user"></i> <span>John Doe</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                        <i class="fas fa-user"></i> <span>Admin</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                         <ul class="nav-list">
@@ -85,53 +84,86 @@
                         <div class="page-title" style="margin-bottom: 20px;">
                             <h3>Student management</h3>
                         </div>
-                        <div class="filterClass">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Input Class ID" aria-label="Username" aria-describedby="input-group-button-right">
-                                <button type="button" class="btn btn-outline-secondary" id="input-group-button-right">Filter</button>
-                            </div>
-                        </div>
-
-
                         <!-- Form insert new student -->
                         <div id="insertForm" class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">Thêm học sinh mới</div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Điền thông tin học sinh vào bên dưới:</h5>
-                                    <form class="needs-validation" novalidate accept-charset="utf-8">
-                                        <div class="row g-2">
-                                            <div class="mb-3 col-md-6">
-                                                <label for="text" class="form-label">Họ tên</label>
-                                                <input type="text" class="form-control" name="hoten" placeholder="Họ tên" required>
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label for="text" class="form-label">Số điện thoại</label>
-                                                <input type="number" class="form-control" name="sdt" placeholder="Số điện thoại" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="address" class="form-label">Địa chỉ</label>
-                                            <input type="text" class="form-control" name="address" placeholder="Ex: Số 12, Linh Trung, Thủ Đức" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your address.</div>
-                                        </div>
+                                    <h5 class="card-title">Điền thông tin học sinh mới vào bên dưới:</h5>
+                                    <form accept-charset="utf-8">
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-3">
-                                                <label for="city" class="form-label">Trình độ</label>
-                                                <input type="text" class="form-control" name="trinhDo" placeholder="Mã trình độ" required>
+                                                <label for="text" class="form-label">Tên học sinh</label>
+                                                <input type="text" class="form-control" name="tenHocSinh" minlength="4" placeholder="HocSinh lớp chồi tuần 23" required>
                                             </div>
                                             <div class="mb-3 col-md-3">
-                                                <label for="state" class="form-label">Trạng thái</label>
-                                                <select name="state" class="form-select" required>
-                                                    <option value="" selected>Choose...</option>
-                                                    <option value="1">Hoạt động</option>
-                                                    <option value="2">Ngừng hoạt động</option>
-                                                </select>
+                                                <label for="text" class="form-label">Ngày sinh</label>
+                                                <div class="mb-3">
+                                                    <input type="text" id="insertNgaySinh" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="2020-01-01">
+                                                </div>
                                             </div>
                                             <div class="mb-3 col-md-2">
-                                                <label for="zip" class="form-label">Ngày đăng ký</label>
-                                                <input type="date" class="form-control" name="ngayDK" placeholder="29/03/2022" required>
+                                                <label for="gioiTinh" class="form-label">Giới tính</label>
+                                                <select name="gioiTinh" id="gioiTinhInsert" class="form-control">
+                                                    <option value="nữ">Nữ</option>
+                                                    <option value="nam">Nam</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 col-md-4">
+                                                <label for="maLop" class="form-label">Mã lớp</label>
+                                                <select name="maLop" id="maLop" class="form-control">
+                                                    <option value="2">65 - Lớp mầm 1A</option>
+                                                    <option value="3">66 - Lớp chồi 2B</option>
+                                                    <option value="4">67 - Lớp Cây 3C</option>
+                                                    <option value="1">68 - Lớp Mầm 4D</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-2">
+                                                <label for="hotenPhuHuynh" class="form-label">Họ tên PH</label>
+                                                <input field="*{hotenPhuHuynh}" type="text" class="form-control" name="hotenPhuHuynh" minlength="5" placeholder="Nguyễn Văn ..." required>
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="soDienThoai" class="form-label">Số điện thoại</label>
+                                                <input field="*{soDienThoai}" type="number" class="form-control" name="hotenPhuHuynh" minlength="10" maxlength="10" placeholder="0987654321" required>
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input field="*{email}" type="email" class="form-control" name="email" minlength="5" placeholder="abc@gmail.com">
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="diaChi" class="form-label">Địa chỉ</label>
+                                                <input field="*{diaChi}" type="text" class="form-control" name="diaChi" minlength="5" placeholder="Số 12, đường Linh Trung, Thủ Đức" required>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-2">
+                                                <label for="chieuCao" class="form-label">Chiều cao của bé (cm)</label>
+                                                <input field="*{chieuCao}" type="number" class="form-control" name="chieuCao" min="20" max="120">
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="canNang" class="form-label">Cân nặng của bé (kg)</label>
+                                                <input field="*{canNang}" type="number" class="form-control" min="5" max="60">
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="text" class="form-label">Ngày nhập học</label>
+                                                <div class="mb-3">
+                                                    <input type="text" id="insertNgayNhapHoc" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" placeholder="01/01/2022" aria-describedby="datepicker">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="ghiChu" class="form-label">Ghi chú</label>
+                                                <input field="*{ghiChu}" type="text" class="form-control" placeholder="Lưu ý cho trẻ">
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-3">
+                                                <label for="status" class="form-label">Trạng thái</label>
+                                                <select name="status" id="status" class="form-control">
+                                                    <option value="false">Tạm ngưng</option>
+                                                    <option value="true">Đang đi học</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
@@ -141,49 +173,94 @@
                             </div>
                         </div>
 
-                        <!-- Form update new student -->
+                        <!-- Form update new HocSinh -->
                         <div id="updateForm" class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">Cập nhật thông tin học sinh</div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Điền thông tin cần cập nhật</h5>
-                                    <form class="needs-validation" novalidate accept-charset="utf-8">
-                                        <div class="row g-2">
-                                            <div class="mb-3 col-md-6">
-                                                <label for="text" class="form-label">Họ tên</label>
-                                                <input type="text" class="form-control" name="hoten" placeholder="Họ tên" required>
-                                            </div>
-                                            <div class="mb-3 col-md-6">
-                                                <label for="text" class="form-label">Số điện thoại</label>
-                                                <input type="number" class="form-control" name="sdt" placeholder="Số điện thoại" required>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="address" class="form-label">Địa chỉ</label>
-                                            <input type="text" class="form-control" name="address" placeholder="Ex: Số 12, Linh Trung, Thủ Đức" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please enter your address.</div>
-                                        </div>
+                                    <h5 class="card-title">Cập nhật thông tin vào bên dưới:</h5>
+                                    <form accept-charset="utf-8">
                                         <div class="row g-2">
                                             <div class="mb-3 col-md-3">
-                                                <label for="city" class="form-label">Trình độ</label>
-                                                <input type="text" class="form-control" name="trinhDo" placeholder="Mã trình độ" required>
+                                                <label for="text" class="form-label">Tên học sinh</label>
+                                                <input id="tenHocSinhUpdate" type="text" class="form-control" name="tenHocSinh" minlength="4" placeholder="HocSinh lớp chồi tuần 23" required>
                                             </div>
                                             <div class="mb-3 col-md-3">
-                                                <label for="state" class="form-label">Trạng thái</label>
-                                                <select name="state" class="form-select" required>
-                                                    <option value="" selected>Choose...</option>
-                                                    <option value="1">Hoạt động</option>
-                                                    <option value="2">Ngừng hoạt động</option>
-                                                </select>
+                                                <label for="text" class="form-label">Ngày sinh</label>
+                                                <div class="mb-3">
+                                                    <input type="text" id="ngaySinhUpdate" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" aria-describedby="datepicker" placeholder="2020-01-01">
+                                                </div>
                                             </div>
                                             <div class="mb-3 col-md-2">
-                                                <label for="zip" class="form-label">Ngày đăng ký</label>
-                                                <input type="date" class="form-control" name="ngayDK" placeholder="29/03/2022" required>
+                                                <label for="gioiTinh" class="form-label">Giới tính</label>
+                                                <select name="gioiTinh" id="gioiTinhUpdate" class="form-control">
+                                                    <option value="nữ">Nữ</option>
+                                                    <option value="nam">Nam</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 col-md-4">
+                                                <label for="maLop" class="form-label">Mã lớp</label>
+                                                <select name="maLop" id="maLopUpdate" class="form-control">
+                                                    <option value="65">65 - Lớp mầm 1A</option>
+                                                    <option value="66">66 - Lớp chồi 2B</option>
+                                                    <option value="67">67 - Lớp Cây 3C</option>
+                                                    <option value="68">68 - Lớp Mầm 4D</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Update</button>
-                                        <button type="submit" class="btn btn-danger"><i class="fas fa-undo"></i> Cancel</button>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-2">
+                                                <label for="hotenPhuHuynh" class="form-label">Họ tên PH</label>
+                                                <input field="*{hotenPhuHuynh}" id="tenPhuHuynhUpdate" type="text" class="form-control" name="hotenPhuHuynh" minlength="5" placeholder="Nguyễn Văn ..." required>
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="soDienThoai" class="form-label">Số điện thoại</label>
+                                                <input field="*{soDienThoai}" id="soDienThoaiUpdate" type="number" class="form-control" minlength="10" maxlength="10" placeholder="0987654321" required>
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input field="*{email}" id="emailUpdate" type="email" class="form-control" name="email" minlength="5" placeholder="abc@gmail.com">
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="diaChi" class="form-label">Địa chỉ</label>
+                                                <input field="*{diaChi}" id="diaChiUpdate" type="text" class="form-control" name="diaChi" minlength="5" placeholder="Số 12, đường Linh Trung, Thủ Đức" required>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-2">
+                                                <label for="chieuCao" class="form-label">Chiều cao của bé (cm)</label>
+                                                <input field="*{chieuCao}" id="chieuCaoUpdate" type="number" class="form-control" name="chieuCao" min="20" max="120">
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="canNang" class="form-label">Cân nặng của bé (kg)</label>
+                                                <input field="*{canNang}" id="canNangUpdate" type="number" class="form-control" min="5" max="60">
+                                            </div>
+                                            <div class="mb-3 col-md-2">
+                                                <label for="text" class="form-label">Ngày nhập học</label>
+                                                <div class="mb-3">
+                                                    <input type="text" id="ngayNhapHocUpdate" data-format="YYYY-MM-DD" class="form-control datepicker-here" data-language="en" placeholder="01/01/2022" aria-describedby="datepicker">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3 col-md-6">
+                                                <label for="ghiChu" class="form-label">Ghi chú</label>
+                                                <input field="*{ghiChu}" id="ghiChuUpdate" type="text" class="form-control" placeholder="Lưu ý cho trẻ">
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="mb-3 col-md-3">
+                                                <label for="status" class="form-label">Trạng thái</label>
+                                                <select name="status" id="statusUpdate" class="form-control">
+                                                    <option value="false">Tạm ngưng</option>
+                                                    <option value="true">Đang học</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3 col-md-3">
+                                                <label class="form-label">ID</label>
+                                                <input id="idUpdate" type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary "><i class="fas fa-save"></i> Save</button>
+                                        <button type="submit" class="btn btn-danger "><i class="fas fa-undo"></i> Cancel</button>
                                     </form>
                                 </div>
                             </div>
@@ -193,56 +270,56 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
                                 <div class="card">
-                                    <div class="card-header">Student list</div>
+                                    <div class="card-header">HocSinh list</div>
                                     <div class="card-body">
                                         <div class="table-responsive">
                                             <table class="table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Mã HV</th>
-                                                        <th>Họ tên</th>
-                                                        <th>Địa chỉ</th>
-                                                        <th>SDT</th>
-                                                        <th>Trình độ</th>
-                                                        <th>Ngày đăng ký</th>
-                                                        <th>Trạng thái</th>
+                                                        <th>Mã HS</th>
+                                                        <th>Tên HS</th>
+                                                        <th>Ngày sinh</th>
+                                                        <th>Giới tính</th>
+                                                        <th>Họ tên PH</th>
+                                                        <th>SĐT</th>
+                                                        <th>Mã lớp</th>
+                                                        <th hidden>Email</th>
+                                                        <th hidden>Địa chỉ</th>
+                                                        <th hidden>Chiều cao</th>
+                                                        <th hidden>Cân nặng</th>
+                                                        <th hidden>Ngày nhập học</th>
+                                                        <th hidden>Ghi chú</th>
+                                                        <th hidden>Trạng thái</th>
                                                         <th> </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <th scope="row">1235</th>
-                                                        <td>Mark Zuck</td>
-                                                        <td>Số 23, đường Hoàng Văn Thụ, Phường Long Bình, Quận 9 </td>
-                                                        <td>0362103314</td>
-                                                        <td>112233</td>
-                                                        <th>29/03/2022</th>
-                                                        <th>Đang học</th>
+                                                        <th scope="row">123</th>
+                                                        <td>Nguyễn Thị Thu Hiền</td>
+                                                        <td>2019-09-03</td>
+                                                        <td>nữ</td>
+                                                        <td>Nguyễn Văn Nam</td>
+                                                        <td>0987654321</td>
+                                                        <td>66</td>
+                                                        <td hidden>vanNam@gmail.com</td>
+                                                        <td hidden>Số 12 đường Linh Trung, Thủ Đức</td>
+                                                        <td hidden>90</td>
+                                                        <td hidden>30</td>
+                                                        <td hidden>2022-09-09</td>
+                                                        <td hidden>Không có ghi chú gì</td>
+                                                        <td hidden>Đang học</td>
                                                         <th>
                                                             <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                                                                <button type="button" id="updateStudentBtn" class="btn btn-primary">Fix</button>
-                                                                <button type="button" class="btn btn-danger deleteStudentBtn">Del</button>
+                                                                <button type="button" class="btn btn-primary updateHocSinhBtn">Fix</button>
+                                                                <button type="button" class="btn btn-danger deleteHocSinhBtn">Del</button>
                                                             </div>
                                                         </th>
                                                     </tr>
+
                                                     <tr>
-                                                        <th scope="row">6345</th>
-                                                        <td>Mark Zuck</td>
-                                                        <td>S111, Đường Tân Hiệp, Tân Long, Bình Thạnh</td>
-                                                        <td>0362103314</td>
-                                                        <td>112233</td>
-                                                        <th>29/03/2022</th>
-                                                        <th>Đang học</th>
-                                                        <th>
-                                                            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
-                                                                <button type="button" id="updateStudentBtn" class="btn btn-primary">Fix</button>
-                                                                <button type="button" class="btn btn-danger deleteStudentBtn">Del</button>
-                                                            </div>
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row" colspan="8" style="text-align: right;">
-                                                            <button type="button" id="addStudentBtn" class="btn btn-primary">Thêm học sinh</button>
+                                                        <th scope="row" colspan="10" style="text-align: right;">
+                                                            <button type="button" id="addHocSinhBtn" class="btn btn-primary">Thêm học sinh mới</button>
                                                         </th>
                                                     </tr>
                                                 </tbody>
@@ -255,37 +332,96 @@
 
                     </div>
                 </div>
+            </div>
         </div>
     </div>
-    <script>
-        $(document).ready(function() {
-            $("#insertForm").hide();
-            $("#updateForm").hide();
-            $("#addStudentBtn").click(function() {
-                $("#updateForm").hide();
-                $("#insertForm").toggle(500);
-            });
-            $("#updateStudentBtn").click(function() {
-                $("#insertForm").hide();
-                $("#updateForm").toggle(500);
-            });
-    
-            // Delete button
-            $(".deleteStudentBtn").click(function() {
-                //get infor of student to delete here
-                if (confirm("Do you want to delete student id: " + $(this).parent().parent().parent().first().children().first().text())) {
-                    $(this).parent().parent().parent().remove();
-                }
-    
-            });
-        });
-    </script>
+
     <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
     <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/assets/vendor/chartsjs/Chart.min.js"></script>
-    <script src="../static/assets/js/dashboard-charts.js"></script>
+    <script src="../static/assets/vendor/airdatepicker/js/datepicker.min.js"></script>
+    <script src="../static/assets/vendor/airdatepicker/js/i18n/datepicker.en.js"></script>
+    <script src="../static/assets/vendor/mdtimepicker/mdtimepicker.min.js"></script>
     <script src="../static/assets/js/script.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+        mdtimepicker('.timepicker', {
+            format: 'h:mm tt',
+            hourPadding: 'true'
+        });
+    </script>
 </body>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor
+        .create(document.querySelector('#editorUpdate'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<script>
+    $(document).ready(function() {
+        $("#insertForm").hide();
+        $("#updateForm").hide();
+        $("#addHocSinhBtn").click(function() {
+            $("#updateForm").hide();
+            $("#insertForm").toggle(500);
+            $("#insertDateForm").val('2022-12-12');
+        });
 
+        $(".updateHocSinhBtn").click(function() {
+            $("#insertForm").hide();
+            $("#updateForm").toggle(500);
+            $("#idUpdate").val($(this).parent().parent().parent().first().children().first().text());
+            $("#tenHocSinhUpdate").val($(this).parent().parent().parent().first().children().first().next().text());
+            $("#ngaySinhUpdate").val($(this).parent().parent().parent().first().children().first().next().next().text());
+            $("#tenPhuHuynhUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().text());
+            $("#maLopUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().text());
+            $("#soDienThoaiUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().text());
+            $("#emailUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().text());
+
+            $("#diaChiUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().text());
+            $("#chieuCaoUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().next().text());
+            $("#canNangUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().next().next().text());
+            $("#ngayNhapHocUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().next().next().next().text());
+            $("#ghiChuUpdate").val($(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().next().next().next().next().text());
+
+            var status = $(this).parent().parent().parent().first().children().first().next().next().next().next().next().next().next().next().next().next().next().next().next().text();
+            $("#statusUpdate").val(status == "Đang học" ? "true" : "false");
+        });
+
+        // Delete button
+        $(".deleteHocSinhBtn").click(function() {
+            //get infor of HocSinh to delete here
+            if (confirm("Do you want to delete HocSinh id: " + $(this).parent().parent().parent().first().children().first().text())) {
+                $(this).parent().parent().parent().remove();
+            }
+
+        });
+
+        $('#insertNgaySinh').datepicker({
+            dateFormat: 'yyyy-mm-dd'
+        }).val();
+        $('#insertNgayKetThuc').datepicker({
+            dateFormat: 'yyyy-mm-dd'
+        }).val();
+        $('#updateDateForm').datepicker({
+            dateFormat: 'yyyy-mm-dd'
+        }).val();
+    });
+    // $(function() {
+    //     // Bootstrap DateTimePicker v3
+    //     $('#datetimepicker').datetimepicker({
+    //         pickTime: false
+    //     });
+    //     // Bootstrap DateTimePicker v4
+    //     $('#datetimepicker').datetimepicker({
+    //         format: 'DD/MM/YYYY'
+    //     });
+    // });
+</script>
 
 </html>
