@@ -374,7 +374,7 @@
 
         $(".updateHocSinhBtn").click(function() {
             $("#insertForm").hide();
-            $("#updateForm").toggle(500);
+            $("#updateForm").show();
             $("#idUpdate").val($(this).parent().parent().parent().first().children().first().text());
             $("#tenHocSinhUpdate").val($(this).parent().parent().parent().first().children().first().next().text());
             $("#ngaySinhUpdate").val($(this).parent().parent().parent().first().children().first().next().next().text());
