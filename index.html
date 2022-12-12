@@ -40,6 +40,76 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
   </head>
   <body>
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/css/header.js"></script>
+    <section class="navigation sticky" style=" z-index: 100;">
+        <div class="nav-container fs-3">
+          <div class="brand">
+            <a href="index.html" >Little Rainbow</a>
+          </div>
+          <nav>
+            <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+              <li>
+                <a href="./index.html">Trang chủ</a>
+              </li>
+              <li>
+                <a href="gioithieu.html">Giới thiệu</a>
+              </li>
+              <li>
+                <a href="#!">Tuyển sinh</a>
+                <ul class="nav-dropdown">
+                  <li>
+                    <a href="#!">Quy trình tuyển sinh</a>
+                  </li>
+                  <li>
+                    <a href="tuvan.html">Đăng kí tư vấn</a>
+                  </li>
+                  <li>
+                    <a href="tuyensinh.html">Đăng kí nhập học</a>
+                  </li>
+                  <li>
+                    <a href="#!">Học phí tham khảo</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#!">Chương trình học</a>
+              </li>
+              <li>
+                <a href="#!">Hoạt động</a>
+                <ul class="nav-dropdown">
+                  <li>
+                    <a href="blog.html">Thông báo - Sự kiện</a>
+                  </li>
+                  <li>
+                    <a href="#!">Thời khóa biểu</a>
+                  </li>
+                  <li>
+                    <a href="#!">Thực đơn</a>
+                  </li>
+                  <li>
+                    <a href="blog.html">Blog</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#!">Liên hệ</a>
+                <ul class="nav-dropdown">
+                  <li>
+                    <a href="tuvan.html">Chăm sóc khách hàng</a>
+                  </li>
+                  <li>
+                    <a href="#!">Tuyển dụng</a>
+                  </li>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
     <div class="main">
       <header class="header">
         <!-- <div class="header-top">
@@ -59,29 +129,7 @@
             <button class="btn-x">Hotline: 0987.654.321</button>
           </div>
         </div> -->
-        <div class="header-nav sticky">
-          <ul class="header-nav-list">
-            <li class="header-nav-item">
-              <a href="" class="header-nav-link">TRANG CHỦ</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="" class="header-nav-link">GIỚI THIỆU</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="" class="header-nav-link">TUYỂN SINH</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="" class="header-nav-link">THÔNG TIN CẦN BIẾT</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="" class="header-nav-link">CHƯƠNG TRÌNH HỌC</a>
-            </li>
-            <li class="header-nav-item">
-              <a href="" class="header-nav-link">LIÊN LẠC GÓP Ý</a>
-            </li>
-          </ul>
-        </div>
-      </header>
+      
       <section class="slide">
         <div
           id="carouselExampleIndicators"
@@ -108,7 +156,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="./assets/img/silde1.png"
+                src="./assets/img/slider1.png"
                 class="d-block w-100"
                 alt="..."
               />
@@ -174,7 +222,7 @@
           xuyên được cơ quan y tế kiểm tra, giám sát. Bếp ăn của nhà trường luôn
           đảm bảo vệ sinh an toàn thực phẩm….
         </p>
-        <button class="btn-size-s">Xem chi tiết</button>
+        <a href="gioithieu.html" class="btn-size-s">Xem chi tiết</a>
       </section>
       <section class="course">
         <div class="course-top">
@@ -188,7 +236,8 @@
         <div class="course-main">
           <div class="course-main-item">
             <a href="" class="course-main-link">
-              <img
+              <img 
+                style="height: 240px; object-fit: cover;"
                 src="./assets/img/c1.jpg"
                 alt=""
                 class="course-main-link-img"
@@ -199,7 +248,7 @@
           <div class="course-main-item">
             <a href="" class="course-main-link">
               <img
-                src="./assets/img/c1.jpg"
+                src="./assets/img/student1.jpeg"
                 alt=""
                 class="course-main-link-img"
               />
@@ -209,7 +258,7 @@
           <div class="course-main-item">
             <a href="" class="course-main-link">
               <img
-                src="./assets/img/c1.jpg"
+                src="./assets/img/student2.jpeg"
                 alt=""
                 class="course-main-link-img"
               />
@@ -219,7 +268,7 @@
           <div class="course-main-item">
             <a href="" class="course-main-link">
               <img
-                src="./assets/img/c1.jpg"
+                src="./assets/img/student3.jpeg"
                 alt=""
                 class="course-main-link-img"
               />
@@ -228,8 +277,8 @@
           </div>
           <div class="course-main-item">
             <a href="" class="course-main-link">
-              <img
-                src="./assets/img/c1.jpg"
+              <img style="height: 240px; object-fit: cover;"
+                src="./assets/img/student4.jpeg"
                 alt=""
                 class="course-main-link-img"
               />
@@ -244,13 +293,13 @@
         <div class="row">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="./assets/img/student5.jpeg"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Boat on Calm Water"
             />
 
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+              src="./assets/img/student6.jpeg"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Wintry Mountain Landscape"
             />
@@ -258,13 +307,13 @@
 
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+            src="./assets/img/student7.jpeg"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Mountains in the Clouds"
             />
 
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+              src="./assets/img/student8.jpeg"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Boat on Calm Water"
             />
@@ -272,13 +321,12 @@
 
           <div class="col-lg-4 mb-4 mb-lg-0">
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+              src="./assets/img/teacherAndStudent2.jpeg"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Waves at Sea"
             />
-
             <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+            src="./assets/img/student10.jpeg"
               class="w-100 shadow-1-strong rounded mb-4"
               alt="Yosemite National Park"
             />
@@ -348,7 +396,7 @@
                                   Phụ huynh Nguyễn Quốc Thịnh
                                 </h2>
                                 <p  style="font-size: 16px;" class="mb-0 pb-3">
-                                  Rất đắn đo việc lựa chọn trường cho con rồi cuối cùng mình đã chọn trường mầm non Koi Nursery , đến hiện tại thấy rất hài lòng .
+                                  Rất đắn đo việc lựa chọn trường cho con rồi cuối cùng mình đã chọn trường mầm non Cầu vòng nhỏ, đến hiện tại thấy rất hài lòng .
                                   Trường xanh sạch đẹp, các cô giáo rất thân thiện nhiệt tình chuyên nghiệp và trên hết là tận tâm chăm sóc các con. Trường có đa 
                                   dạng các chương trình học trò chơi giúp con phát triển kĩ năng, con thì rất vui khi được đi học. Tuy thời gian đầu con có hay 
                                   bệnh vặt nhưng được các cô chăm sóc kĩ + cho uống thuốc nên mẹ vẫn rất yên tâm khi gửi con.
@@ -522,6 +570,9 @@
             </div>
           </div>
         </div>
+        <div class="col text-center">
+          <a href="#" id="btn-xem-them" type="button" class="btn btn-danger">Xem thêm nhiều tin tức khác </a>
+        </div>
       </section>
 
       <!-- Contact us -->
@@ -563,7 +614,7 @@
                     </div>
                     
                     <div class="col-12">
-                      <button class="btn btn-light fs-3" type="submit">Gửi</button>
+                      <button class="btn btn-light fs-3 m-2" type="submit">Gửi</button>
                     </div>
                 </div>
                 </form>
@@ -573,7 +624,7 @@
                 <i class="fas fa-phone mt-3"></i> <a href="tel:+">  0906 993 262</a><br>
                 <i class="fa fa-envelope mt-3"></i> <a href="">hantt.dongtien@gmail.com</a><br>
                 <i class="fas fa-location-pin mt-3"></i> M4-88, Khu biệt thự Manhattan Glory Vinhomes Grand Park, Nguyễn
-                Xiển, Long Bình, TP. HCM<br>
+                Xiển, Long Bình, Quận 9, TP. Thủ Đức<br>
                 <div class="my-4">
                 <a href="https://www.facebook.com/Mamnoncauvongnho.edu.vn"><i class="fab fa-facebook fa-3x pr-4"></i></a>
                 </div>
@@ -658,7 +709,7 @@
                 <h3 class="text-uppercase mb-4 font-weight-bold">Contact</h3>
                 <p class="text-f">
                   <i class="fas fa-home mr-3"></i> M4-88, Khu biệt thự Manhattan Glory Vinhomes Grand Park, Nguyễn
-                  Xiển, Long Bình, TP. HCM
+                  Xiển, Long Bình, Quận 9, TP. Thủ Đức
                 </p>
                 <p class="text-f">
                   <i class="fas fa-envelope mr-3"></i> hantt.dongtien@gmail.com

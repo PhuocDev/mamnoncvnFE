@@ -6,6 +6,10 @@
     width: 100%;
     z-index: 100; */
 }
+.stickyToBottom {
+    bottom: 0;
+    position: fixed;
+}
 
 /* header */
 .header {
@@ -224,7 +228,14 @@
 .news-main {
     margin: 10px 40px;
 }
-
+#btn-xem-them {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    align-self: center;
+}
 
 /*  footer */
 .text-f {
